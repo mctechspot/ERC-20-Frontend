@@ -24,7 +24,7 @@ ERC-20-Frontend
   <img
   src="erc-20-app/public/assets/create-token-with-gen-ai.gif"
   alt="GitHub Profile Banner"
-  width="450"
+  width="100%"
   height="auto"
   style="display: block; margin: auto;"
   />
