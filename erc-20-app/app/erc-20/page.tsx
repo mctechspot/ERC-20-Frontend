@@ -37,7 +37,7 @@ export default function ERC20Home() {
 
   useEffect(() => {
     connectToMetamask();
-    getMessage();
+    //getMessage();
   }, []);
 
   // Function to initialise MetaMask connection
@@ -107,7 +107,7 @@ export default function ERC20Home() {
     }
   }
 
-  const getMessage = async () => {
+  /*const getMessage = async () => {
     try {
       if (typeof window !== "undefined") {
         const web3 = new Web3(process.env.NEXT_PUBLIC_WEB3_ADDRESS);
@@ -155,7 +155,7 @@ export default function ERC20Home() {
     } catch (error) {
       console.error(error);
     }
-  }
+  }*/
 
   const sendTokens = async (event: any) => {
     event.preventDefault();
