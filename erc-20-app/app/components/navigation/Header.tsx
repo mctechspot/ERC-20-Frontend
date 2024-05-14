@@ -26,9 +26,10 @@ export default function Header() {
                             <BiSolidCoinStack />
                         </button>
 
-                        <button className={`text-purple-mid text-xl`}>
+                        <Link href={"/erc-20/create-token"}
+                        className={`text-purple-mid text-xl`}>
                             <FaCirclePlus />
-                        </button>
+                        </Link>
 
                         <button className={`text-purple-mid text-xl`}>
                             <FaUserAlt />

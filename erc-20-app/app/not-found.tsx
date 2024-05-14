@@ -1,8 +1,8 @@
 "use client"
 import Image from 'next/image'
 import Link from 'next/link'
-import Header from "@/app/components/navigation/Header"
-import Footer from "@/app/components/navigation/Footer"
+import Header from "@/app/components/Navigation/Header"
+import Footer from "@/app/components/Navigation/Footer"
 import ERC20LogoSvg from "@/public/assets/erc-20-logo.svg"
 
 export default function NotFound() {

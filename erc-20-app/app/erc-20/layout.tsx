@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import Header from "@/app/components/navigation/Header"
-import Footer from "@/app/components/navigation/Footer"
+import Header from "@/app/components/Navigation/Header"
+import Footer from "@/app/components/Navigation/Footer"
 
 export default function MainLayout({
   children,
