@@ -47,7 +47,7 @@ export default function ERC20Home() {
         if (manualTokenCreation) {
             setTokenCreationText("Create a token manually.")
         } else {
-            setTokenCreationText("Create a token with generative AI.")
+            setTokenCreationText("Create a token with Generative AI.")
         }
     }, [manualTokenCreation]);
 
@@ -96,10 +96,12 @@ export default function ERC20Home() {
     };
 
     return (
-        <div className={`mx-[100px] my-[50px] text-white`}>
-            <p className={`text-2xl text-purple-mid`}>Hello, Cryptouser!</p><br />
+        <div className={`mx-[100px] my-[50px] text-white text-center`}>
+            <p className={`text-2xl text-purple-mid`}>Hello, Cryptomaster!</p><br />
 
-            <div className={`flex gap-2 items-center justify-content`}>
+            <p className={`text-gold-standard text-xl font-bold text-center`}>Create a Token</p><br />
+
+            <div className={`flex gap-2 items-center justify-center`}>
                 <button className={`bg-gold-standard p-2 rounded ${manualTokenCreation ? ("text-purple-mid") : ("")}`}
                     onClick={() => setManualTokenCreation(true)}>
                     Manual

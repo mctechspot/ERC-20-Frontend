@@ -3,7 +3,6 @@ import OpenAI from "openai";
 export async function POST(request: NextRequest, response: NextResponse) {
     try {
         const payload = await request.json();
-        console.log(payload);
         const generatedToken = await generateToken(payload.prompt);
         return NextResponse.json({ "response": generatedToken }, { status: 200 });
 
@@ -23,7 +22,7 @@ const generateToken = async (prompt: string) => {
                 content: `You are a helpful assistant designed to output JSON to create an ERC-20 token.\
         Return the following keys: name (token name), symbol(token symbol). \ 
         Use this user prompt for inspiration: ${prompt}. Be creative. Don't include the word token in the name. \
-        Don't include spaces in the name.`,
+        Don't include spaces in the name. Token should be three characters and capitalised.`,
             },
         ],
         model: "gpt-3.5-turbo-0125",
@@ -42,7 +41,5 @@ const generateToken = async (prompt: string) => {
     image_url = tokenImage.data[0].url;
 
     const tokenChoice = JSON.parse(token.choices[0].message.content!);
-    console.log(image_url);
-    console.log(tokenChoice);
     return { ...tokenChoice, image: image_url };
 }

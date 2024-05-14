@@ -67,7 +67,7 @@ export default function GenAICreateTokenForm({
                     <button type={"submit"} className={`bg-gold-standard text-white text-center p-2 rounded w-full`}
                         disabled={generatingToken}>
                         <div className={`flex gap-2 items-center justify-center`}>
-                            <span>Generate Token Content</span>
+                            <span>{generatingToken ? ("Generating Token Content") : generatedToken ? ("Regenerate Token Content") : ("Generate Token Content")}</span>
                             {generatingToken ? (
                                 <LoadSpinner colour={"white"} size={16} />
                             ) : ("")}
@@ -85,19 +85,22 @@ export default function GenAICreateTokenForm({
                                 <br /><br />
                                 <p className={`text-center`}>Token Name: {generatedToken.response.name}</p>
                                 <p className={`text-center`}>Token Symbol: {generatedToken.response.symbol}</p><br />
-                                <Image
-                                    src={generatedToken.response.image}
-                                    alt={`${generatedToken.response.name} Image`}
-                                    height={`200`}
-                                    width={`200`}
-                                    className={`bg-purple-md rounded block m-auto`}
-                                /><br />
-                                <p className={`text-center`}>If you like this content then, go ahead and create the token or regenerate the content.</p><br />
+                                <div className={`relative h-fit w-fit bg-purple-mid rounded block m-auto`}>
+                                    <Image
+                                        src={generatedToken.response.image}
+                                        alt={`${generatedToken.response.name} Image`}
+                                        height={`200`}
+                                        width={`200`}
+                                        className={`bg-purple-md rounded block m-auto`}
+                                    />
+                                </div>
+                                <br />
+                                <p className={`text-center`}>If you like this content, go ahead and create the token. If not, regenerate the content.</p><br />
                                 <button type={"button"} className={`bg-gold-standard text-white text-center p-2 rounded w-full`}
                                     disabled={creatingToken}
                                     onClick={() => createToken(generatedToken.response)}>
                                     <div className={`flex gap-2 items-center justify-center`}>
-                                        <span>Create Content</span>
+                                        <span>Create Token</span>
                                         {creatingToken ? (
                                             <LoadSpinner colour={"white"} size={16} />
                                         ) : ("")}

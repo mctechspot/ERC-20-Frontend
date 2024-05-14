@@ -817,7 +817,7 @@ export default function ERC20Home() {
 
   return (
     <div className={`mx-[100px] my-[50px] text-white`}>
-      <p className={`text-2xl text-purple-mid`}>Hello, Cryptouser!</p><br />
+      <p className={`text-2xl text-purple-mid`}>Hello, Cryptomaster!</p><br />
 
       {metamaskDefined ? (
         <>
